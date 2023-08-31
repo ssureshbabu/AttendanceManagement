@@ -1,13 +1,28 @@
 ﻿
 <div>
     <table class="table">
-        <tr>
+        <thead>
+           <tr>
             <th>Employee Id</th>
             <th>Employee Name</th>
-            <th>DOB</th>
-            <th>Designation</th>
-            <th>Gender</th>
-            <th>Attendance</th>
+              <th>Employee Designation</th>
+             <th>Employee DOB</th>
+              <th>Employee Gender</th>
+              <th>Employee Attendance</th>
         </tr>
+        </thead>
+       <tbody>
+           @foreach (var item in Model)
+           { 
+               <tr>
+                 <th>@item.EmployeeId</th>
+                 <th>@item.EmployeeName</th>
+                 <th>@item.EmployeeDesignation</th>
+                 <th>@item.EmployeeDOB</th>
+                 <th>@item.EmployeeGender</th>
+                 <th>@item.EmployeeAttendance</th>
+             </tr>
+           }
+       </tbody>  
     </table>
 </div>

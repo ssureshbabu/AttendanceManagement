@@ -1,43 +1,44 @@
-﻿<div class="container">
+﻿@model Employee
+<div class="container">
     <h4>Add Employee</h4>
     <br>
-    <form>
+    <form method="post">
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label">EmployeeId</label>
+            <label asp-for="@Model.EmployeeId" class="col-sm-2 col-form-label">EmployeeId</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="EmployeeId" style="width:200px">
+                <input asp-for="@Model.EmployeeId" type="text" class="form-control" placeholder="EmployeeId" style="width:200px">
             </div>
         </div>
         <br>
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label">EmployeeName</label>
+            <label asp-for="@Model.EmployeeName" class="col-sm-2 col-form-label">EmployeeName</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="EmployeeName" style="width:200px">
+                <input asp-for="@Model.EmployeeName" type="text" class="form-control" placeholder="EmployeeName" style="width:200px">
             </div>
             </Div>
             <br>
             <div class="form-group row">
-            <label class="col-sm-2 col-form-label">EmployeeDOB</label>
+            <label asp-for="@Model.EmployeeDesignation" class="col-sm-2 col-form-label">EmployeeDesignation</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="EmployeeDOB" style="width:200px">
-            </div>
-        </div>
-        <br>
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label">EmployeeDesignation</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" placeholder="EmployeeDesignation" style="width:200px">
+                <input  asp-for="@Model.EmployeeDesignation" type="text" class="form-control" placeholder="EmployeeDesignation" style="width:200px">
             </div>
         </div>
         <br>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">EmployeeGender</label>
+            <label asp-for="@Model.EmployeeDOB" class="col-sm-2 col-form-label">EmployeeDOB</label>
+            <div class="col-sm-10">
+                <input asp-for="@Model.EmployeeDOB" type="text" class="form-control" placeholder="EmployeeDOB" style="width:200px">
+            </div>
+        </div>
+        <br>
+            <div class="form-group row">
+                <label asp-for="@Model.EmployeeGender" class="col-sm-2 col-form-label">EmployeeGender</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control"  placeholder="EmployeeGender" style="width:200px">
+                    <input asp-for="@Model.EmployeeGender" type="text" class="form-control"  placeholder="EmployeeGender" style="width:200px">
                 </div>
             </div>
             <br>
-             <a class="btn btn-primary" style="width:100px">Add</a>
+             <button type="submit" class="btn btn-primary" style="width:100px">Add</button>
     </form>
         </div>
        
