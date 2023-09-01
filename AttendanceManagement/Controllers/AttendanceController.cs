@@ -35,11 +35,12 @@ namespace AttendanceManagement.Controllers
         [HttpPost]
         public IActionResult AddEmployeeIndex(Employee emp)
         {
-            if (ModelState.IsValid) 
+            if (ModelState.IsValid)
             {
-            _context.Employee.Add(emp);
-            _context.SaveChanges();
-                return RedirectToAction("AttendanceIndex");            }
+                _context.Employee.Add(emp);
+                _context.SaveChanges();
+                return RedirectToAction("AttendanceIndex");
+             }
             return View();
         }
 
